@@ -9,3 +9,46 @@ body {
 }
 
 a { @apply transition-colors; }
+
+
+@layer components {
+  .heading-accent {
+    @apply relative inline-block pb-2;
+  }
+
+  .heading-accent::before {
+    content: "";
+    @apply absolute -z-10 h-3 rounded-sm;
+    left: -0.05em;
+    right: -0.05em;
+    bottom: 0.2em;
+    background: linear-gradient(90deg, rgba(37, 99, 235, 0.2), rgba(30, 58, 138, 0.1));
+  }
+
+  .heading-accent::after {
+    content: "";
+    @apply absolute left-0 right-0 h-px;
+    bottom: 0;
+    background: linear-gradient(90deg, rgba(37, 99, 235, 0.75), rgba(30, 58, 138, 0.55));
+  }
+
+  .name-accent {
+    @apply relative inline-block pb-1;
+  }
+
+  .name-accent::before {
+    content: "";
+    @apply absolute -z-10 h-3 rounded-sm;
+    left: -0.08em;
+    right: -0.08em;
+    bottom: 0.12em;
+    background: linear-gradient(90deg, rgba(37, 99, 235, 0.24), rgba(30, 58, 138, 0.14));
+  }
+
+  .name-accent::after {
+    content: "";
+    @apply absolute left-0 right-0 h-px;
+    bottom: -0.05em;
+    background: linear-gradient(90deg, rgba(37, 99, 235, 0.7), rgba(30, 58, 138, 0.5));
+  }
+}

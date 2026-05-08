@@ -17,7 +17,7 @@ export default function ProfilePage() {
       <div className="space-y-8">
         <div className="grid gap-6 md:grid-cols-[1.2fr_1fr] md:items-start">
           <div>
-            <h2 className="text-xl font-semibold">{profile.name}</h2>
+            <h2 className="text-xl font-semibold heading-accent">{profile.name}</h2>
             <ul className="mt-3 list-disc space-y-1 pl-5 text-muted">
               {profile.basics.map((b) => (
                 <li key={b}>{b}</li>
@@ -38,7 +38,7 @@ export default function ProfilePage() {
         </div>
 
         <div>
-          <h3 className="mb-3 text-lg font-medium">人物像</h3>
+          <h3 className="mb-3 text-lg font-medium heading-accent">人物像</h3>
           <div className="space-y-4 leading-relaxed text-muted">
             <p>
               福澤瑞人は、近畿大学 経営学部 経営学科 ITビジネスコースに在籍し、Web制作・IT・業務改善に関心を持つ学生です。興味を持った分野に対して自分で調べ、試しながら形にしていく姿勢があり、現在はプロフィールサイト制作や業務改善ツールの制作を通して、身近な課題を分かりやすい仕組みに落とし込むことに取り組んでいます。
@@ -50,7 +50,7 @@ export default function ProfilePage() {
         </div>
 
         <div>
-          <h3 className="mb-3 text-lg font-medium">興味・関心</h3>
+          <h3 className="mb-3 text-lg font-medium heading-accent">興味・関心</h3>
           <div className="flex flex-wrap gap-2">
             {profile.interests.map((i) => (
               <Tag key={i} text={i} />
