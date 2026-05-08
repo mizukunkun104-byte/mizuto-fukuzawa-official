@@ -2,17 +2,17 @@ import Image from "next/image";
 
 export default function PlaceholderVisual() {
   return (
-    <div className="relative h-[360px] w-full overflow-hidden sm:h-[460px]">
+    <div className="relative mx-auto mb-6 h-[330px] w-full max-w-[520px] overflow-hidden px-3 sm:mb-0 sm:h-[460px] sm:max-w-none sm:px-0">
       <Image
         src="/images/top-visual-mizuto.png"
         alt="Mizuto Fukuzawa official portrait"
         fill
         priority
         className="object-contain object-bottom"
-        sizes="(min-width: 768px) 50vw, 100vw"
+        sizes="(min-width: 1024px) 42vw, (min-width: 768px) 50vw, 94vw"
       />
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-base via-base/60 to-transparent" />
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-base via-base/55 to-transparent" />
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-2/5 bg-gradient-to-r from-base via-base/70 to-transparent" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-base via-base/70 to-transparent" />
     </div>
   );
 }
