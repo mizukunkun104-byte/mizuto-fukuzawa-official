@@ -5,11 +5,11 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 
 const navItems = [
-  { href: "/", label: "TOP" },
-  { href: "/profile", label: "PROFILE" },
-  { href: "/history", label: "HISTORY" },
-  { href: "/works", label: "WORKS" },
-  { href: "/contact", label: "CONTACT" },
+  { href: "/", label: "トップ" },
+  { href: "/profile", label: "プロフィール" },
+  { href: "/history", label: "経歴" },
+  { href: "/works", label: "制作実績" },
+  { href: "/contact", label: "お問い合わせ" },
 ];
 
 export default function Header() {
