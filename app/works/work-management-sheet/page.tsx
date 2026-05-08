@@ -1,11 +1,55 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import type { ReactNode } from "react";
 import PageTitle from "@/components/PageTitle";
 
 export const metadata: Metadata = {
   title: "Work Management Sheet | Mizuto Fukuzawa",
   description: "業務可視化シートの詳細。",
 };
+
+type Section = { title: string; body: ReactNode };
+
+const sections: Section[] = [
+  {
+    title: "概要",
+    body: "アルバイト先での新人教育や日々の業務管理を改善するために、Googleスプレッドシートを活用した業務管理シートを作成しました。公開時は固有名詞を伏せ、仕組みの考え方に焦点を当てています。",
+  },
+  {
+    title: "背景",
+    body: "新人が何をすればよいか分かりにくく、教育内容が担当者ごとに異なる状況がありました。口頭共有中心のため、忙しい時間帯に指示待ちが発生しやすい点も課題でした。",
+  },
+  {
+    title: "課題",
+    body: (
+      <ul className="list-disc pl-5">
+        <li>新人が次に何をすべきか分からない</li>
+        <li>教育内容のばらつき</li>
+        <li>業務の抜け漏れ</li>
+        <li>忙しい時間帯の指示待ち</li>
+        <li>責任者・先輩への負担集中</li>
+        <li>できる人への業務偏り</li>
+        <li>口頭中心の情報共有</li>
+      </ul>
+    ),
+  },
+  {
+    title: "取り組み",
+    body: "勤務帯ごとに業務リストを分け、担当者を選択できる設計にしました。アルバイトと責任者で優先度を分離し、誰が何を行うかを明確化。本日担当者と昨日担当者を分けることで未完了業務を追跡しやすくし、Google Apps Scriptで勤務帯ごとにリセットする仕組みも実装しました。",
+  },
+  {
+    title: "ビジュアル",
+    body: "公開ページでは、実際のログや内部情報を含まないデモUIのみを掲載。機密に配慮しながら、業務導線や情報整理の構造が伝わる見せ方にしています。",
+  },
+  {
+    title: "成果",
+    body: "業務の可視化により、新人やスタッフが自発的に動きやすい環境づくりに取り組みました。早期離職の減少や長期定着の促進を目指す改善活動として継続しています。",
+  },
+  {
+    title: "学び",
+    body: "現場の観察から課題を抽出し、情報を整理して仕組みとして改善する流れを実践できました。今後は運用ログを基に改善サイクルをさらに高めていきます。",
+  },
+];
 
 export default function Page() {
   return (
@@ -25,8 +69,15 @@ export default function Page() {
         </div>
       </div>
 
-      <div className="space-y-6 text-muted leading-relaxed">
-        <div className="rounded-xl border border-border bg-card p-5"><h2 className="text-lg text-text font-semibold">Overview</h2><p>アルバイト先での新人教育や日々の業務管理を改善するために、Googleスプレッドシートを活用した業務管理シートを作成しました。公開時は固有名詞を伏せ、仕組みの考え方に焦点を当てています。</p></div><div className="rounded-xl border border-border bg-card p-5"><h2 className="text-lg text-text font-semibold">Background</h2><p>新人が何をすればよいか分かりにくく、教育内容が担当者ごとに異なる状況がありました。口頭共有中心のため、忙しい時間帯に指示待ちが発生しやすい点も課題でした。</p></div><div className="rounded-xl border border-border bg-card p-5"><h2 className="text-lg text-text font-semibold">Challenge</h2><ul className="list-disc pl-5"><li>新人が次に何をすべきか分からない</li><li>教育内容のばらつき</li><li>業務の抜け漏れ</li><li>忙しい時間帯の指示待ち</li><li>責任者・先輩への負担集中</li><li>できる人への業務偏り</li><li>口頭中心の情報共有</li></ul></div><div className="rounded-xl border border-border bg-card p-5"><h2 className="text-lg text-text font-semibold">Approach</h2><p>勤務帯ごとに業務リストを分け、担当者を選択できる設計にしました。アルバイトと責任者で優先度を分離し、誰が何を行うかを明確化。本日担当者と昨日担当者を分けることで未完了業務を追跡しやすくし、Google Apps Scriptで勤務帯ごとにリセットする仕組みも実装しました。</p></div><div className="rounded-xl border border-border bg-card p-5"><h2 className="text-lg text-text font-semibold">Visuals</h2><p>公開ページでは、実際のログや内部情報を含まないデモUIのみを掲載。機密に配慮しながら、業務導線や情報整理の構造が伝わる見せ方にしています。</p></div><div className="rounded-xl border border-border bg-card p-5"><h2 className="text-lg text-text font-semibold">Result</h2><p>業務の可視化により、新人やスタッフが自発的に動きやすい環境づくりに取り組みました。早期離職の減少や長期定着の促進を目指す改善活動として継続しています。</p></div><div className="rounded-xl border border-border bg-card p-5"><h2 className="text-lg text-text font-semibold">Learning</h2><p>現場の観察から課題を抽出し、情報を整理して仕組みとして改善する流れを実践できました。今後は運用ログを基に改善サイクルをさらに高めていきます。</p></div>
+      <div className="rounded-xl border border-border bg-card p-5 sm:p-6">
+        <div className="space-y-7 text-muted leading-relaxed sm:space-y-8">
+          {sections.map((section) => (
+            <section key={section.title} className="space-y-2">
+              <h2 className="text-lg text-text font-semibold">{section.title}</h2>
+              <div>{section.body}</div>
+            </section>
+          ))}
+        </div>
       </div>
     </section>
   );
