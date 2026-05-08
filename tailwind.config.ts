@@ -9,7 +9,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        base: "#0F1115",
+        base: "#080B10",
         card: "#181B21",
         text: "#F5F5F5",
         muted: "#AAB0BC",
