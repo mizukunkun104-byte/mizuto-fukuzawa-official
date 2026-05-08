@@ -5,7 +5,14 @@
 :root { color-scheme: dark; }
 
 body {
-  @apply bg-base text-text antialiased;
+  @apply text-text antialiased;
+  background-color: #080B10;
+  background-image:
+    radial-gradient(1100px 680px at 10% 6%, rgba(37, 99, 235, 0.15), transparent 64%),
+    radial-gradient(980px 620px at 90% 94%, rgba(30, 58, 138, 0.14), transparent 70%),
+    radial-gradient(520px 360px at 34% 78%, rgba(185, 28, 28, 0.045), transparent 76%),
+    radial-gradient(460px 300px at 72% 22%, rgba(185, 28, 28, 0.035), transparent 78%);
+  background-repeat: no-repeat;
 }
 
 a { @apply transition-colors; }
