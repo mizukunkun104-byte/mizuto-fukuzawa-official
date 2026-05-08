@@ -73,7 +73,7 @@ export default function Page() {
         <div className="space-y-7 text-muted leading-relaxed sm:space-y-8">
           {sections.map((section) => (
             <section key={section.title} className="space-y-2">
-              <h2 className="text-lg text-text font-semibold">{section.title}</h2>
+              <h2 className="text-lg text-text font-semibold heading-accent">{section.title}</h2>
               <div>{section.body}</div>
             </section>
           ))}
