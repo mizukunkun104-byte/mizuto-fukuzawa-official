@@ -8,9 +8,10 @@ body {
   @apply text-text antialiased;
   background-color: #080B10;
   background-image:
-    radial-gradient(1200px 700px at 12% 8%, rgba(37, 99, 235, 0.12), transparent 62%),
-    radial-gradient(1000px 640px at 88% 92%, rgba(30, 58, 138, 0.1), transparent 68%),
-    radial-gradient(860px 520px at 50% 108%, rgba(185, 28, 28, 0.04), transparent 74%);
+    radial-gradient(1100px 680px at 10% 6%, rgba(37, 99, 235, 0.15), transparent 64%),
+    radial-gradient(980px 620px at 90% 94%, rgba(30, 58, 138, 0.14), transparent 70%),
+    radial-gradient(520px 360px at 34% 78%, rgba(185, 28, 28, 0.045), transparent 76%),
+    radial-gradient(460px 300px at 72% 22%, rgba(185, 28, 28, 0.035), transparent 78%);
   background-repeat: no-repeat;
 }
 
