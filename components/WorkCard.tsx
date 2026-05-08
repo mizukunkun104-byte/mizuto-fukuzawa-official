@@ -7,7 +7,7 @@ export default function WorkCard({ title, subtitle, summary, href, image }: Prop
     <Link
       href={href}
       aria-label={`${title} の詳細を見る`}
-      className="group block rounded-xl border border-border bg-card p-5 transition-all duration-200 ease-out animate-fade-in hover:-translate-y-0.5 hover:border-blue/60 hover:bg-[#171b22] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue/70"
+      className="group hover-lift-card block rounded-xl border border-border bg-card p-5 transition-all duration-300 ease-out animate-fade-in focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue/70"
     >
       <article>
         <div className="mb-4 overflow-hidden rounded-lg border border-border bg-[#171a20]">

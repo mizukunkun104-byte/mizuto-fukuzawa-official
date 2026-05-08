@@ -9,3 +9,114 @@ body {
 }
 
 a { @apply transition-colors; }
+
+.animate-rise-in {
+  animation: riseIn 0.72s ease-out both;
+}
+
+.animate-rise-in-delay-1 {
+  animation: riseIn 0.82s ease-out both;
+  animation-delay: 0.1s;
+}
+
+.animate-rise-in-delay-2 {
+  animation: riseIn 0.92s ease-out both;
+  animation-delay: 0.2s;
+}
+
+.animate-visual-entrance {
+  animation: visualFadeIn 1s ease-out both;
+}
+
+.animate-gentle-float {
+  animation: visualFadeIn 1s ease-out both, gentleFloat 7s ease-in-out 1.2s infinite;
+}
+
+.top-ambient-motion::before,
+.top-ambient-motion::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  border-radius: 9999px;
+  pointer-events: none;
+  filter: blur(36px);
+  opacity: 0.16;
+}
+
+.top-ambient-motion::before {
+  width: 340px;
+  height: 340px;
+  right: -120px;
+  top: -96px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.34), rgba(37, 99, 235, 0));
+  animation: ambientDriftOne 12s ease-in-out infinite alternate;
+}
+
+.top-ambient-motion::after {
+  width: 280px;
+  height: 280px;
+  left: -110px;
+  bottom: -110px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.22), rgba(59, 130, 246, 0));
+  animation: ambientDriftTwo 15s ease-in-out infinite alternate;
+}
+
+.top-ambient-motion > * {
+  position: relative;
+  z-index: 1;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .hover-lift-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(37, 99, 235, 0.6);
+    background-color: #171b22;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-rise-in,
+  .animate-rise-in-delay-1,
+  .animate-rise-in-delay-2,
+  .animate-visual-entrance,
+  .animate-gentle-float,
+  .top-ambient-motion::before,
+  .top-ambient-motion::after,
+  .hover-lift-card {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+    transform: none !important;
+  }
+}
+
+@keyframes riseIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes visualFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes gentleFloat {
+  0%,
+  100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes ambientDriftOne {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-18px, 14px, 0); }
+}
+
+@keyframes ambientDriftTwo {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(14px, -10px, 0); }
+}

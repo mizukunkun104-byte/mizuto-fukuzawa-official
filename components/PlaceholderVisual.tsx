@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function PlaceholderVisual() {
   return (
-    <div className="relative mx-auto mb-6 h-[330px] w-full max-w-[520px] overflow-hidden bg-base sm:mb-0 sm:h-[460px] sm:max-w-none">
+    <div className="animate-visual-entrance animate-gentle-float relative mx-auto mb-6 h-[330px] w-full max-w-[520px] overflow-hidden bg-base sm:mb-0 sm:h-[460px] sm:max-w-none">
       <Image
         src="/images/top-visual-mizuto.png"
         alt="Mizuto Fukuzawa official portrait"
