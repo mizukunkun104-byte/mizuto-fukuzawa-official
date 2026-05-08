@@ -1,5 +1,33 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import PageTitle from "@/components/PageTitle";
-export const metadata: Metadata = { title: "Staff Navi | Mizuto Fukuzawa", description: "スタッフ向けナビの詳細。" };
-export default function Page(){return <section><PageTitle title="Staff Navi" description="店舗業務を分かりやすく案内するスタッフ向けナビ" /><div className="space-y-6 text-muted leading-relaxed"><div className="rounded-xl border border-border bg-card p-5"><h2 className="text-lg text-text font-semibold">Overview</h2><p>アルバイト現場での業務確認や新人教育を支援するために作成した、スタッフ向けナビゲーションツールです。社内コンテスト参加をきっかけに、実運用を見据えたデモとして設計しました。</p></div><div className="rounded-xl border border-border bg-card p-5"><h2 className="text-lg text-text font-semibold">Background</h2><p>業務管理シートによる可視化を進める中で、業務中に分からないことを即時に確認できる仕組みの必要性を感じました。情報があるだけでなく、探しやすさを重視する必要がありました。</p></div><div className="rounded-xl border border-border bg-card p-5"><h2 className="text-lg text-text font-semibold">Challenge</h2><ul className="list-disc pl-5"><li>新人が不明点をすぐ確認できない</li><li>必要情報を探しにくい</li><li>教育担当者の負担が大きい</li><li>マニュアルの可読性が低い</li><li>対応品質のばらつき</li><li>責任者確認が必要な場面の判断が難しい</li></ul></div><div className="rounded-xl border border-border bg-card p-5"><h2 className="text-lg text-text font-semibold">Approach</h2><p>困りごとを入力・選択して対応候補へ進むナビゲーション型UIを採用。新人向けだけでなく責任者向け情報整理にも拡張できる構想を持たせました。現在は店舗内で一定期間検証し、利用件数や確認時間などの記録を行う想定です。</p></div><div className="rounded-xl border border-border bg-card p-5"><h2 className="text-lg text-text font-semibold">Visuals</h2><p>公開用には機密情報を含まないデモ画面のみを使用。実在名や内部マニュアル全文は掲載せず、構造設計と操作導線が伝わる形に調整しています。</p><div className="mt-4 overflow-hidden rounded-lg border border-border bg-[#171a20]"><div className="relative aspect-[3/2] w-full"><Image src="/images/work-staff-navi.png" alt="Staff Navi visual" fill className="object-contain object-center" sizes="(max-width: 768px) 100vw, 900px" /></div></div></div><div className="rounded-xl border border-border bg-card p-5"><h2 className="text-lg text-text font-semibold">Result</h2><p>現時点では検証中のため、確定的な成果は示さず、実用性の確認を進めています。定量分析に向けて必要ログを収集し、改善観点の整理を進めています。</p></div><div className="rounded-xl border border-border bg-card p-5"><h2 className="text-lg text-text font-semibold">Learning</h2><p>お仕事表から発展して、業務改善をツール化する発想へつながりました。将来的にはスタッフ向けだけでなく、お客様向け案内への応用可能性も視野に入れています。</p></div></div></section>}
+
+export const metadata: Metadata = {
+  title: "Staff Navi | Mizuto Fukuzawa",
+  description: "スタッフ向けナビの詳細。",
+};
+
+export default function Page() {
+  return (
+    <section>
+      <PageTitle title="Staff Navi" description="店舗業務を分かりやすく案内するスタッフ向けナビ" />
+
+      <div className="mb-6 overflow-hidden rounded-xl border border-border bg-[#171a20] p-2 sm:p-3">
+        <div className="relative aspect-[3/2] w-full">
+          <Image
+            src="/images/work-staff-navi.png"
+            alt="Staff Navi visual"
+            fill
+            className="rounded-lg object-contain object-center"
+            sizes="(max-width: 768px) 100vw, 900px"
+            priority
+          />
+        </div>
+      </div>
+
+      <div className="space-y-6 text-muted leading-relaxed">
+        <div className="rounded-xl border border-border bg-card p-5"><h2 className="text-lg text-text font-semibold">Overview</h2><p>アルバイト現場での業務確認や新人教育を支援するために作成した、スタッフ向けナビゲーションツールです。社内コンテスト参加をきっかけに、実運用を見据えたデモとして設計しました。</p></div><div className="rounded-xl border border-border bg-card p-5"><h2 className="text-lg text-text font-semibold">Background</h2><p>業務管理シートによる可視化を進める中で、業務中に分からないことを即時に確認できる仕組みの必要性を感じました。情報があるだけでなく、探しやすさを重視する必要がありました。</p></div><div className="rounded-xl border border-border bg-card p-5"><h2 className="text-lg text-text font-semibold">Challenge</h2><ul className="list-disc pl-5"><li>新人が不明点をすぐ確認できない</li><li>必要情報を探しにくい</li><li>教育担当者の負担が大きい</li><li>マニュアルの可読性が低い</li><li>対応品質のばらつき</li><li>責任者確認が必要な場面の判断が難しい</li></ul></div><div className="rounded-xl border border-border bg-card p-5"><h2 className="text-lg text-text font-semibold">Approach</h2><p>困りごとを入力・選択して対応候補へ進むナビゲーション型UIを採用。新人向けだけでなく責任者向け情報整理にも拡張できる構想を持たせました。現在は店舗内で一定期間検証し、利用件数や確認時間などの記録を行う想定です。</p></div><div className="rounded-xl border border-border bg-card p-5"><h2 className="text-lg text-text font-semibold">Visuals</h2><p>公開用には機密情報を含まないデモ画面のみを使用。実在名や内部マニュアル全文は掲載せず、構造設計と操作導線が伝わる形に調整しています。</p></div><div className="rounded-xl border border-border bg-card p-5"><h2 className="text-lg text-text font-semibold">Result</h2><p>現時点では検証中のため、確定的な成果は示さず、実用性の確認を進めています。定量分析に向けて必要ログを収集し、改善観点の整理を進めています。</p></div><div className="rounded-xl border border-border bg-card p-5"><h2 className="text-lg text-text font-semibold">Learning</h2><p>お仕事表から発展して、業務改善をツール化する発想へつながりました。将来的にはスタッフ向けだけでなく、お客様向け案内への応用可能性も視野に入れています。</p></div>
+      </div>
+    </section>
+  );
+}
