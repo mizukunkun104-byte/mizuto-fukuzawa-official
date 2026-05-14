@@ -4,8 +4,8 @@ import type { ReactNode } from "react";
 import PageTitle from "@/components/PageTitle";
 
 export const metadata: Metadata = {
-  title: "Staff Navi | Mizuto Fukuzawa",
-  description: "スタッフ向けナビの詳細。",
+  title: "店舗スタッフ向け業務ナビ | Mizuto Fukuzawa",
+  description: "業務手順の確認導線をまとめたWebツールの制作実績です。",
 };
 
 type Section = { title: string; body: ReactNode };
@@ -13,7 +13,7 @@ type Section = { title: string; body: ReactNode };
 const sections: Section[] = [
   {
     title: "概要",
-    body: "新人教育や日々の業務確認を支援するために設計した、Webベースのスタッフ向けナビゲーション画面です。必要な情報に迷わずたどり着けるよう、確認導線の分かりやすさを重視して検証を進めています。",
+    body: "日々の業務確認を支援するために設計した、Webベースのスタッフ向けナビゲーション画面です。必要な情報に迷わずたどり着けるよう、確認導線の分かりやすさを重視して検証を進めています。",
   },
   {
     title: "背景",
@@ -23,43 +23,43 @@ const sections: Section[] = [
     title: "課題",
     body: (
       <ul className="list-disc pl-5">
-        <li>新人が不明点をすぐ確認できない</li>
+        <li>不明点をすぐ確認できない</li>
         <li>必要情報を探しにくい</li>
-        <li>教育担当者の負担が大きい</li>
+        <li>確認対応が一部メンバーに集中しやすい</li>
         <li>マニュアルの可読性が低い</li>
         <li>対応品質のばらつき</li>
-        <li>責任者確認が必要な場面の判断が難しい</li>
+        <li>確認が必要な場面の判断が難しい</li>
       </ul>
     ),
   },
   {
     title: "取り組み",
-    body: "業務カテゴリと確認項目を整理し、迷ったときに必要な手順へ進みやすいナビゲーション構成を設計しました。責任者や先輩に毎回聞かなくても基本事項を確認できることを目指し、スマホ・PCのどちらからでも見やすい画面構成を検証しています。",
+    body: "業務カテゴリと確認項目を整理し、迷ったときに必要な手順へ進みやすいナビゲーション構成を設計しました。基本事項を自分で確認できることを目指し、スマホ・PCのどちらからでも見やすい画面構成を検証しています。",
   },
   {
     title: "ビジュアル",
-    body: "公開用には機密情報を含まないデモ画面のみを使用。実在名や内部マニュアル全文は掲載せず、構造設計と操作導線が伝わる形に調整しています。",
+    body: "公開用には掲載用に再構成したデモ画面のみを使用しています。固有名詞や具体的な運用内容は掲載せず、構造設計と操作導線が伝わる形に調整しています。",
   },
   {
     title: "成果",
-    body: "業務に関する情報をカテゴリごとに整理し、新人やスタッフが必要な内容を確認しやすい導線づくりを目指しています。現在は検証段階のため、現場で使いやすい構成や表示内容を調整しながら改善を進めています。",
+    body: "業務に関する情報をカテゴリごとに整理し、スタッフが必要な内容を確認しやすい導線づくりを目指しています。現在は検証段階のため、使いやすい構成や表示内容を調整しながら改善を進めています。",
   },
   {
     title: "学び",
-    body: "お仕事表から発展して、業務改善をツール化する発想へつながりました。将来的にはスタッフ向けだけでなく、お客様向け案内への応用可能性も視野に入れています。",
+    body: "業務管理シートから発展して、業務改善をWebツール化する発想へつながりました。利用者が迷わず確認できる構成を考えることで、情報設計と導線設計の重要性を学びました。",
   },
 ];
 
 export default function Page() {
   return (
     <section>
-      <PageTitle title="Staff Navi" description="店舗業務を分かりやすく案内するスタッフ向けナビ" />
+      <PageTitle title="店舗スタッフ向け業務ナビ" description="業務手順の確認導線をまとめたWebツール" />
 
       <div className="mb-6 overflow-hidden rounded-xl border border-border bg-[#171a20] p-2 sm:p-3">
         <div className="relative aspect-[3/2] w-full">
           <Image
             src="/images/work-staff-navi.png"
-            alt="Staff Navi visual"
+            alt="店舗スタッフ向け業務ナビのデモ画面"
             fill
             className="rounded-lg object-contain object-center"
             sizes="(max-width: 768px) 100vw, 900px"
