@@ -3,30 +3,30 @@ import Image from "next/image";
 import type { ReactNode } from "react";
 import PageTitle from "@/components/PageTitle";
 
-export const metadata: Metadata = { title: "Personal Website | Mizuto Fukuzawa", description: "プロフィールサイト制作プロジェクトの詳細。" };
+export const metadata: Metadata = { title: "個人ポートフォリオサイト | Mizuto Fukuzawa", description: "個人ポートフォリオサイト制作プロジェクトの詳細です。" };
 
 type Section = { title: string; body: ReactNode };
 
 const sections: Section[] = [
-  { title: "概要", body: "このサイトは、自分のプロフィールをまとめるだけでなく、Web制作・公開・運用の流れを一通り学ぶための実践プロジェクトとして制作しています。" },
-  { title: "背景", body: "今後、飲食店や個人事業向けのホームページ制作に応用していくことを見据え、まずは自分自身を題材にしてサイト設計の基本を固めることを目的にしました。" },
-  { title: "課題", body: "情報を見やすく整理しながら、スマホでの可読性とPCでの上品な見え方を両立することが課題でした。過度な演出を避け、落ち着いた印象を保つ必要もありました。" },
+  { title: "概要", body: "このサイトは、対応領域や制作実績を整理し、Web制作や業務改善ツール制作の実績として提示できるポートフォリオとして制作しています。" },
+  { title: "背景", body: "小規模なWebサイトやLP制作、業務改善ツール制作に応用していくことを見据え、構成設計・実装・公開・運用の流れを実践することを目的にしました。" },
+  { title: "課題", body: "制作実績を分かりやすく見せながら、個人情報を出しすぎない構成に整えることが課題でした。スマホでの可読性とPCでの落ち着いた見え方の両立も意識しました。" },
   { title: "取り組み", body: "Next.js App RouterとTypeScript、Tailwind CSSを採用し、ページごとに役割を明確化。Header / Footer / WorkCardなどを部品化し、再利用性と保守性を高めました。" },
-  { title: "ビジュアル", body: <p>黒基調の背景に青を主アクセントとして配置し、赤は最小限に使用。トップには差し替え可能なプレースホルダービジュアルを置き、今後の正式画像に対応しやすい構造にしました。</p> },
-  { title: "成果", body: "複数ページ構成、レスポンシブ、SEOメタデータ設定を含む初期土台を構築できました。GitHubで管理し、Vercel公開を前提とした実践的な構成に整えています。" },
-  { title: "学び", body: "制作前の要件整理の重要性、コンポーネント分割による実装効率、公開を見据えた守秘観点の必要性を学びました。今後は運用改善と実案件想定の導線設計を強化します。" },
+  { title: "ビジュアル", body: <p>黒基調の背景に青を主アクセントとして配置し、落ち着いた印象で制作物が見やすい構成にしています。トップには差し替え可能なビジュアルを置き、今後の更新にも対応しやすい構造にしました。</p> },
+  { title: "成果", body: "複数ページ構成、レスポンシブ対応、SEOメタデータ設定を含む初期土台を構築しました。GitHubで管理し、Vercel公開を前提とした実践的な構成に整えています。" },
+  { title: "学び", body: "制作前の要件整理、コンポーネント分割による実装効率、公開を見据えた個人情報・守秘観点の重要性を学びました。今後は実案件を想定した導線設計と改善提案の見せ方を強化します。" },
 ];
 
 export default function Page() {
   return (
     <section>
-      <PageTitle title="Personal Website" description="自分自身のプロフィールサイト制作" />
+      <PageTitle title="個人ポートフォリオサイト" description="Web制作・公開・運用の実践" />
 
       <div className="mb-6 overflow-hidden rounded-xl border border-border bg-[#171a20] p-2 sm:p-3">
         <div className="relative aspect-[3/2] w-full">
           <Image
             src="/images/work-personal-website.png"
-            alt="Personal Website visual"
+            alt="個人ポートフォリオサイトの画面"
             fill
             className="rounded-lg object-contain object-center"
             sizes="(max-width: 768px) 100vw, 900px"

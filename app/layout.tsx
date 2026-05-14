@@ -4,8 +4,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Mizuto Fukuzawa Official Website",
-  description: "福澤瑞人の公式プロフィールサイト。プロフィール、経歴、制作物、活動を掲載しています。",
+  title: "Mizuto Fukuzawa Portfolio",
+  description: "福澤瑞人のポートフォリオサイト。Web制作、LP制作、Googleスプレッドシート、業務改善ツールの制作実績を掲載しています。",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

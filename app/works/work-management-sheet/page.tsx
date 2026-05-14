@@ -4,8 +4,8 @@ import type { ReactNode } from "react";
 import PageTitle from "@/components/PageTitle";
 
 export const metadata: Metadata = {
-  title: "Work Management Sheet | Mizuto Fukuzawa",
-  description: "業務可視化シートの詳細。",
+  title: "業務管理シート | Mizuto Fukuzawa",
+  description: "Googleスプレッドシートを使った業務管理シートの制作実績です。",
 };
 
 type Section = { title: string; body: ReactNode };
@@ -13,54 +13,54 @@ type Section = { title: string; body: ReactNode };
 const sections: Section[] = [
   {
     title: "概要",
-    body: "アルバイト先での新人教育や日々の業務管理を改善するために、Googleスプレッドシートを活用した業務管理シートを作成しました。公開時は固有名詞を伏せ、仕組みの考え方に焦点を当てています。",
+    body: "日々の確認事項や担当状況を整理するために、Googleスプレッドシートを活用した業務管理シートを作成しました。公開ページでは固有名詞や具体的な運用内容を伏せ、仕組みの考え方に焦点を当てています。",
   },
   {
     title: "背景",
-    body: "新人が何をすればよいか分かりにくく、教育内容が担当者ごとに異なる状況がありました。口頭共有中心のため、忙しい時間帯に指示待ちが発生しやすい点も課題でした。",
+    body: "担当する作業や優先順位が分かりにくい場面があり、口頭共有だけでは確認漏れや対応のばらつきが起きやすい点に課題を感じました。",
   },
   {
     title: "課題",
     body: (
       <ul className="list-disc pl-5">
-        <li>新人が次に何をすべきか分からない</li>
-        <li>教育内容のばらつき</li>
-        <li>業務の抜け漏れ</li>
-        <li>忙しい時間帯の指示待ち</li>
-        <li>責任者・先輩への負担集中</li>
-        <li>できる人への業務偏り</li>
+        <li>次に確認する作業が分かりにくい</li>
+        <li>共有内容にばらつきが出やすい</li>
+        <li>確認事項の抜け漏れ</li>
+        <li>忙しい時間帯の確認待ち</li>
+        <li>一部メンバーへの確認負担の集中</li>
+        <li>担当の偏り</li>
         <li>口頭中心の情報共有</li>
       </ul>
     ),
   },
   {
     title: "取り組み",
-    body: "勤務帯ごとに業務リストを分け、担当者を選択できる設計にしました。アルバイトと責任者で優先度を分離し、誰が何を行うかを明確化。本日担当者と昨日担当者を分けることで未完了業務を追跡しやすくし、Google Apps Scriptで勤務帯ごとにリセットする仕組みも実装しました。",
+    body: "時間帯ごとに確認項目を分け、担当者や進捗を選択できる設計にしました。役割ごとに優先度を整理し、誰が何を行うかを明確化。Google Apps Scriptで定期的に入力状態を整える仕組みも実装しました。",
   },
   {
     title: "ビジュアル",
-    body: "公開ページでは、実際のログや内部情報を含まないデモUIのみを掲載。機密に配慮しながら、業務導線や情報整理の構造が伝わる見せ方にしています。",
+    body: "公開ページでは、掲載用に再構成したデモUIのみを使用しています。公開範囲に配慮しながら、業務導線や情報整理の構造が伝わる見せ方にしています。",
   },
   {
     title: "成果",
-    body: "業務の可視化により、新人やスタッフが自発的に動きやすい環境づくりに取り組みました。早期離職の減少や長期定着の促進を目指す改善活動として継続しています。",
+    body: "確認事項を一覧化することで、担当状況や未対応項目を把握しやすい形に整理しました。スタッフが自分で確認しやすい環境づくりを目指した改善活動として継続しています。",
   },
   {
     title: "学び",
-    body: "現場の観察から課題を抽出し、情報を整理して仕組みとして改善する流れを実践できました。今後は運用ログを基に改善サイクルをさらに高めていきます。",
+    body: "業務上の課題を抽出し、情報を整理して仕組みとして改善する流れを実践できました。今後は利用状況を確認しながら、項目整理や操作性の改善を進めます。",
   },
 ];
 
 export default function Page() {
   return (
     <section>
-      <PageTitle title="Work Management Sheet" description="新人教育と業務可視化のためのお仕事表" />
+      <PageTitle title="業務管理シート" description="担当・進捗を整理するGoogleスプレッドシート" />
 
       <div className="mb-6 overflow-hidden rounded-xl border border-border bg-[#171a20] p-2 sm:p-3">
         <div className="relative aspect-[3/2] w-full">
           <Image
             src="/images/work-management-sheet.png"
-            alt="Work Management Sheet visual"
+            alt="業務管理シートのデモ画面"
             fill
             className="rounded-lg object-contain object-center"
             sizes="(max-width: 768px) 100vw, 900px"

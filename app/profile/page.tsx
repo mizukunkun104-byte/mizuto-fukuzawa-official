@@ -6,7 +6,7 @@ import { profile } from "@/data/profile";
 
 export const metadata: Metadata = {
   title: "Profile | Mizuto Fukuzawa",
-  description: "福澤瑞人の基本情報、人物像、関心領域を紹介します。",
+  description: "福澤瑞人の対応領域、人物像、関心領域を紹介します。",
 };
 
 export default function ProfilePage() {
@@ -40,11 +40,9 @@ export default function ProfilePage() {
         <div>
           <h3 className="mb-3 text-lg font-medium heading-accent">人物像</h3>
           <div className="space-y-4 leading-relaxed text-muted">
+            <p>{profile.bio}</p>
             <p>
-              福澤瑞人は、近畿大学 経営学部 経営学科 ITビジネスコースに在籍し、Web制作・IT・業務改善に関心を持つ学生です。興味を持った分野に対して自分で調べ、試しながら形にしていく姿勢があり、現在はプロフィールサイト制作や業務改善ツールの制作を通して、身近な課題を分かりやすい仕組みに落とし込むことに取り組んでいます。
-            </p>
-            <p>
-              アルバイト現場での経験をきっかけに、業務の見える化や新人が確認しやすい仕組みづくりにも関心を持ち、GoogleスプレッドシートやWebベースのナビ画面を活用した改善にも取り組んでいます。派手な表現よりも、実際に使いやすく、相手に伝わりやすい形に整えることを意識しています。
+              現在は、LP・ポートフォリオサイトの制作、Googleスプレッドシートを使った業務管理、Webベースの案内画面づくりを中心に制作しています。派手な表現よりも、依頼内容や利用者に合わせて、必要な情報が分かりやすく届く形に整えることを大切にしています。
             </p>
           </div>
         </div>
