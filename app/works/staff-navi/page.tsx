@@ -4,8 +4,8 @@ import type { ReactNode } from "react";
 import PageTitle from "@/components/PageTitle";
 
 export const metadata: Metadata = {
-  title: "店舗スタッフ向け業務ナビ | Mizuto Fukuzawa",
-  description: "業務手順の確認導線をまとめたWebツールの制作実績です。",
+  title: "お仕事ナビ / スタッフ対応ナビ | Mizuto Fukuzawa",
+  description: "業務確認や問い合わせ対応を支援する業務ナビゲーションアプリの制作実績です。",
 };
 
 type Section = { title: string; body: ReactNode };
@@ -53,13 +53,13 @@ const sections: Section[] = [
 export default function Page() {
   return (
     <section>
-      <PageTitle title="店舗スタッフ向け業務ナビ" description="業務手順の確認導線をまとめたWebツール" />
+      <PageTitle title="お仕事ナビ / スタッフ対応ナビ" description="業務確認や問い合わせ対応を支援する業務ナビゲーションアプリ" />
 
       <div className="mb-6 overflow-hidden rounded-xl border border-border bg-[#171a20] p-2 sm:p-3">
         <div className="relative aspect-[3/2] w-full">
           <Image
             src="/images/work-staff-navi.png"
-            alt="店舗スタッフ向け業務ナビのデモ画面"
+            alt="お仕事ナビ / スタッフ対応ナビのデモ画面"
             fill
             className="rounded-lg object-contain object-center"
             sizes="(max-width: 768px) 100vw, 900px"
